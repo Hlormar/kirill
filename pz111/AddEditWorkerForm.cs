@@ -29,7 +29,14 @@ namespace pz111
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //save
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //otmena
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 }
