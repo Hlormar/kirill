@@ -1,0 +1,14 @@
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+bin/
+obj/
+Debug/
+Release/
+
+*.log
+*.vsidx
