@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerID = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerFIO = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerINN = new System.Windows.Forms.TextBox();
+            this.textBoxWorkerPosition = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -77,33 +77,33 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Должность:";
             // 
-            // textBox1
+            // textBoxWorkerID
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 4;
+            this.textBoxWorkerID.Location = new System.Drawing.Point(136, 35);
+            this.textBoxWorkerID.Name = "textBoxWorkerID";
+            this.textBoxWorkerID.Size = new System.Drawing.Size(102, 20);
+            this.textBoxWorkerID.TabIndex = 4;
             // 
-            // textBox2
+            // textBoxWorkerFIO
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 69);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(292, 20);
-            this.textBox2.TabIndex = 5;
+            this.textBoxWorkerFIO.Location = new System.Drawing.Point(136, 69);
+            this.textBoxWorkerFIO.Name = "textBoxWorkerFIO";
+            this.textBoxWorkerFIO.Size = new System.Drawing.Size(292, 20);
+            this.textBoxWorkerFIO.TabIndex = 5;
             // 
-            // textBox3
+            // textBoxWorkerINN
             // 
-            this.textBox3.Location = new System.Drawing.Point(136, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(210, 20);
-            this.textBox3.TabIndex = 6;
+            this.textBoxWorkerINN.Location = new System.Drawing.Point(136, 140);
+            this.textBoxWorkerINN.Name = "textBoxWorkerINN";
+            this.textBoxWorkerINN.Size = new System.Drawing.Size(210, 20);
+            this.textBoxWorkerINN.TabIndex = 6;
             // 
-            // textBox4
+            // textBoxWorkerPosition
             // 
-            this.textBox4.Location = new System.Drawing.Point(136, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(292, 20);
-            this.textBox4.TabIndex = 7;
+            this.textBoxWorkerPosition.Location = new System.Drawing.Point(136, 103);
+            this.textBoxWorkerPosition.Name = "textBoxWorkerPosition";
+            this.textBoxWorkerPosition.Size = new System.Drawing.Size(292, 20);
+            this.textBoxWorkerPosition.TabIndex = 7;
             // 
             // button1
             // 
@@ -132,10 +132,10 @@
             this.ClientSize = new System.Drawing.Size(458, 229);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxWorkerPosition);
+            this.Controls.Add(this.textBoxWorkerINN);
+            this.Controls.Add(this.textBoxWorkerFIO);
+            this.Controls.Add(this.textBoxWorkerID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -154,10 +154,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxWorkerID;
+        private System.Windows.Forms.TextBox textBoxWorkerFIO;
+        private System.Windows.Forms.TextBox textBoxWorkerINN;
+        private System.Windows.Forms.TextBox textBoxWorkerPosition;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

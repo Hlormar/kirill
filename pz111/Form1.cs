@@ -20,6 +20,7 @@ namespace pz111
             dataSet1.Worker.AcceptChanges();
             dataSet1.WorkLog.AcceptChanges();
             dataSet1.WriteXml(FILE_PATH);
+            Console.WriteLine("saved to xml");
         }
 
         private void LoadFromXml()
@@ -31,6 +32,7 @@ namespace pz111
         public Form1()
         {
             InitializeComponent();
+            LoadFromXml();
         }
 
         private void workerDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,13 +51,41 @@ namespace pz111
         private void button5_Click(object sender, EventArgs e)
         {
             //добавить работника
-            AddEditWorkerForm addEditWorkerForm = new AddEditWorkerForm();
+            AddEditWorkerForm addEditWorkerForm = new AddEditWorkerForm(dataSet1);
             addEditWorkerForm.ShowDialog();
             SaveToXml();
         }
 
         private void workLogDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //удалить работника
+            DataGridViewRow currentRow = workerDataGridView.CurrentRow;
+            if (currentRow == null) return;
+            
+            DialogResult confirmation = MessageBox.Show($"Удалить работника {currentRow.Cells[1].Value?.ToString()}?", 
+                "Подтверждение удаления", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (confirmation == DialogResult.Yes) 
+            {
+                workerDataGridView.Rows.Remove(workerDataGridView.CurrentRow);
+                SaveToXml();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //редактировать работника
+            DataGridViewRow currentRow = workerDataGridView.CurrentRow;
+            if (currentRow == null) return;
+
+            AddEditWorkerForm addEditWorkerForm = new AddEditWorkerForm(dataSet1, currentRow);
+            addEditWorkerForm.ShowDialog();
+            SaveToXml();
 
         }
     }
