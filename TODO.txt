@@ -1,0 +1,4 @@
+убрать "код работника" "код записи" из окон AddEdit, оставить только когда редактируем (readonly) (LWYTKN - HEAVENLY JUMPSTYLE (ULTRA SLOWED)HEAVENLY JUMPSTYLE (ULTRA SLOWED))
+убрать бар сверху
+добавить всем столбцам Caption на русском языке
+выключенные кнопки удалить/редактировать, если пустая бд

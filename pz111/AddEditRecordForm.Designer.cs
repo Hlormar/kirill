@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxRecordID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBoxRecordEndDate = new System.Windows.Forms.TextBox();
+            this.textBoxRecordStartDate = new System.Windows.Forms.TextBox();
+            this.textBoxRecordWorkerID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxRecordDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,12 +51,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Код записи:";
             // 
-            // textBox1
+            // textBoxRecordID
             // 
-            this.textBox1.Location = new System.Drawing.Point(142, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(95, 20);
-            this.textBox1.TabIndex = 1;
+            this.textBoxRecordID.Location = new System.Drawing.Point(142, 27);
+            this.textBoxRecordID.Name = "textBoxRecordID";
+            this.textBoxRecordID.Size = new System.Drawing.Size(95, 20);
+            this.textBoxRecordID.TabIndex = 1;
             // 
             // button1
             // 
@@ -76,26 +76,26 @@
             this.button2.Text = "Сохранить";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // textBoxRecordEndDate
             // 
-            this.textBox2.Location = new System.Drawing.Point(142, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(95, 20);
-            this.textBox2.TabIndex = 4;
+            this.textBoxRecordEndDate.Location = new System.Drawing.Point(142, 133);
+            this.textBoxRecordEndDate.Name = "textBoxRecordEndDate";
+            this.textBoxRecordEndDate.Size = new System.Drawing.Size(95, 20);
+            this.textBoxRecordEndDate.TabIndex = 4;
             // 
-            // textBox3
+            // textBoxRecordStartDate
             // 
-            this.textBox3.Location = new System.Drawing.Point(142, 98);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(95, 20);
-            this.textBox3.TabIndex = 5;
+            this.textBoxRecordStartDate.Location = new System.Drawing.Point(142, 98);
+            this.textBoxRecordStartDate.Name = "textBoxRecordStartDate";
+            this.textBoxRecordStartDate.Size = new System.Drawing.Size(95, 20);
+            this.textBoxRecordStartDate.TabIndex = 5;
             // 
-            // textBox4
+            // textBoxRecordWorkerID
             // 
-            this.textBox4.Location = new System.Drawing.Point(142, 63);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(95, 20);
-            this.textBox4.TabIndex = 6;
+            this.textBoxRecordWorkerID.Location = new System.Drawing.Point(142, 63);
+            this.textBoxRecordWorkerID.Name = "textBoxRecordWorkerID";
+            this.textBoxRecordWorkerID.Size = new System.Drawing.Size(95, 20);
+            this.textBoxRecordWorkerID.TabIndex = 6;
             // 
             // label2
             // 
@@ -133,12 +133,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Описание работы:";
             // 
-            // textBox5
+            // textBoxRecordDescription
             // 
-            this.textBox5.Location = new System.Drawing.Point(142, 169);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(183, 20);
-            this.textBox5.TabIndex = 10;
+            this.textBoxRecordDescription.Location = new System.Drawing.Point(142, 169);
+            this.textBoxRecordDescription.Name = "textBoxRecordDescription";
+            this.textBoxRecordDescription.Size = new System.Drawing.Size(183, 20);
+            this.textBoxRecordDescription.TabIndex = 10;
             // 
             // AddEditRecordForm
             // 
@@ -146,16 +146,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 259);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBoxRecordDescription);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxRecordWorkerID);
+            this.Controls.Add(this.textBoxRecordStartDate);
+            this.Controls.Add(this.textBoxRecordEndDate);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxRecordID);
             this.Controls.Add(this.label1);
             this.Name = "AddEditRecordForm";
             this.Text = "Form2";
@@ -167,16 +167,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxRecordID;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBoxRecordEndDate;
+        private System.Windows.Forms.TextBox textBoxRecordStartDate;
+        private System.Windows.Forms.TextBox textBoxRecordWorkerID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxRecordDescription;
     }
 }
