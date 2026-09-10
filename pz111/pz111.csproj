@@ -48,11 +48,6 @@
   <ItemGroup>
     <Compile Include="DataSet1.cs" />
     <Compile Include="DataSet1.Designer.cs" />
-    <Compile Include="DataSet11.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
