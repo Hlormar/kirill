@@ -140,7 +140,7 @@ namespace pz111
             if (File.Exists("data.xml"))
             {
                 this.dataSet1.Clear();
-                this.dataSet1.ReadXml("data.xml");
+                this.dataSet1.ReadXml("data.xml");  
                 MessageBox.Show("Данные загружены!");
             }
             else
