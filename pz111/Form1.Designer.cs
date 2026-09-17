@@ -54,6 +54,7 @@
             this.workerDataGridView.AllowUserToAddRows = false;
             this.workerDataGridView.AllowUserToDeleteRows = false;
             this.workerDataGridView.AutoGenerateColumns = false;
+            this.workerDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.workerDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.workerDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.workerIdDataGridViewTextBoxColumn,
@@ -62,7 +63,7 @@
             this.innDataGridViewTextBoxColumn});
             this.workerDataGridView.DataSource = this.workerBindingSource;
             this.workerDataGridView.Location = new System.Drawing.Point(24, 398);
-            this.workerDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workerDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.workerDataGridView.Name = "workerDataGridView";
             this.workerDataGridView.RowHeadersWidth = 82;
             this.workerDataGridView.Size = new System.Drawing.Size(1084, 340);
@@ -73,6 +74,7 @@
             this.workLogDataGridView.AllowUserToAddRows = false;
             this.workLogDataGridView.AllowUserToDeleteRows = false;
             this.workLogDataGridView.AutoGenerateColumns = false;
+            this.workLogDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.workLogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.workLogDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
@@ -82,7 +84,7 @@
             this.dataGridViewTextBoxColumn9});
             this.workLogDataGridView.DataSource = this.workLogBindingSource;
             this.workLogDataGridView.Location = new System.Drawing.Point(24, 23);
-            this.workLogDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.workLogDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.workLogDataGridView.Name = "workLogDataGridView";
             this.workLogDataGridView.RowHeadersWidth = 82;
             this.workLogDataGridView.Size = new System.Drawing.Size(1084, 342);
@@ -91,7 +93,7 @@
             // btnAddRecord
             // 
             this.btnAddRecord.Location = new System.Drawing.Point(1120, 23);
-            this.btnAddRecord.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAddRecord.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddRecord.Name = "btnAddRecord";
             this.btnAddRecord.Size = new System.Drawing.Size(336, 106);
             this.btnAddRecord.TabIndex = 3;
@@ -102,7 +104,7 @@
             // btnEditRecord
             // 
             this.btnEditRecord.Location = new System.Drawing.Point(1120, 142);
-            this.btnEditRecord.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEditRecord.Margin = new System.Windows.Forms.Padding(6);
             this.btnEditRecord.Name = "btnEditRecord";
             this.btnEditRecord.Size = new System.Drawing.Size(336, 106);
             this.btnEditRecord.TabIndex = 4;
@@ -113,7 +115,7 @@
             // btnDeleteRecord
             // 
             this.btnDeleteRecord.Location = new System.Drawing.Point(1122, 260);
-            this.btnDeleteRecord.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDeleteRecord.Margin = new System.Windows.Forms.Padding(6);
             this.btnDeleteRecord.Name = "btnDeleteRecord";
             this.btnDeleteRecord.Size = new System.Drawing.Size(336, 106);
             this.btnDeleteRecord.TabIndex = 5;
@@ -124,7 +126,7 @@
             // btnEditWorker
             // 
             this.btnEditWorker.Location = new System.Drawing.Point(1120, 515);
-            this.btnEditWorker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnEditWorker.Margin = new System.Windows.Forms.Padding(6);
             this.btnEditWorker.Name = "btnEditWorker";
             this.btnEditWorker.Size = new System.Drawing.Size(336, 106);
             this.btnEditWorker.TabIndex = 6;
@@ -135,7 +137,7 @@
             // btnAddWorker
             // 
             this.btnAddWorker.Location = new System.Drawing.Point(1120, 398);
-            this.btnAddWorker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAddWorker.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddWorker.Name = "btnAddWorker";
             this.btnAddWorker.Size = new System.Drawing.Size(336, 106);
             this.btnAddWorker.TabIndex = 7;
@@ -146,7 +148,7 @@
             // btnDeleteWorker
             // 
             this.btnDeleteWorker.Location = new System.Drawing.Point(1120, 633);
-            this.btnDeleteWorker.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnDeleteWorker.Margin = new System.Windows.Forms.Padding(6);
             this.btnDeleteWorker.Name = "btnDeleteWorker";
             this.btnDeleteWorker.Size = new System.Drawing.Size(336, 106);
             this.btnDeleteWorker.TabIndex = 8;
@@ -157,7 +159,7 @@
             // btnSaveXml
             // 
             this.btnSaveXml.Location = new System.Drawing.Point(24, 750);
-            this.btnSaveXml.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSaveXml.Margin = new System.Windows.Forms.Padding(6);
             this.btnSaveXml.Name = "btnSaveXml";
             this.btnSaveXml.Size = new System.Drawing.Size(264, 63);
             this.btnSaveXml.TabIndex = 9;
@@ -168,7 +170,7 @@
             // btnLoadXml
             // 
             this.btnLoadXml.Location = new System.Drawing.Point(300, 750);
-            this.btnLoadXml.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoadXml.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoadXml.Name = "btnLoadXml";
             this.btnLoadXml.Size = new System.Drawing.Size(264, 63);
             this.btnLoadXml.TabIndex = 10;
@@ -179,7 +181,7 @@
             // btnSaveJson
             // 
             this.btnSaveJson.Location = new System.Drawing.Point(576, 750);
-            this.btnSaveJson.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSaveJson.Margin = new System.Windows.Forms.Padding(6);
             this.btnSaveJson.Name = "btnSaveJson";
             this.btnSaveJson.Size = new System.Drawing.Size(264, 63);
             this.btnSaveJson.TabIndex = 11;
@@ -190,7 +192,7 @@
             // btnLoadJson
             // 
             this.btnLoadJson.Location = new System.Drawing.Point(852, 750);
-            this.btnLoadJson.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnLoadJson.Margin = new System.Windows.Forms.Padding(6);
             this.btnLoadJson.Name = "btnLoadJson";
             this.btnLoadJson.Size = new System.Drawing.Size(256, 63);
             this.btnLoadJson.TabIndex = 12;
@@ -204,7 +206,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "RecordId";
             this.dataGridViewTextBoxColumn5.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 200;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -212,7 +213,6 @@
             this.dataGridViewTextBoxColumn6.HeaderText = "WorkerId";
             this.dataGridViewTextBoxColumn6.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 200;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -220,7 +220,6 @@
             this.dataGridViewTextBoxColumn7.HeaderText = "StartDate";
             this.dataGridViewTextBoxColumn7.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 200;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -228,7 +227,6 @@
             this.dataGridViewTextBoxColumn8.HeaderText = "EndDate";
             this.dataGridViewTextBoxColumn8.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 200;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -236,7 +234,6 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "Description";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 10;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.Width = 200;
             // 
             // workLogBindingSource
             // 
@@ -254,7 +251,6 @@
             this.workerIdDataGridViewTextBoxColumn.HeaderText = "WorkerId";
             this.workerIdDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.workerIdDataGridViewTextBoxColumn.Name = "workerIdDataGridViewTextBoxColumn";
-            this.workerIdDataGridViewTextBoxColumn.Width = 200;
             // 
             // fullNameDataGridViewTextBoxColumn
             // 
@@ -262,7 +258,6 @@
             this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
             this.fullNameDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            this.fullNameDataGridViewTextBoxColumn.Width = 200;
             // 
             // positionDataGridViewTextBoxColumn
             // 
@@ -270,7 +265,6 @@
             this.positionDataGridViewTextBoxColumn.HeaderText = "Position";
             this.positionDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
-            this.positionDataGridViewTextBoxColumn.Width = 200;
             // 
             // innDataGridViewTextBoxColumn
             // 
@@ -278,7 +272,6 @@
             this.innDataGridViewTextBoxColumn.HeaderText = "Inn";
             this.innDataGridViewTextBoxColumn.MinimumWidth = 10;
             this.innDataGridViewTextBoxColumn.Name = "innDataGridViewTextBoxColumn";
-            this.innDataGridViewTextBoxColumn.Width = 200;
             // 
             // workerBindingSource
             // 
@@ -287,8 +280,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1476, 829);
             this.Controls.Add(this.btnLoadJson);
             this.Controls.Add(this.btnSaveJson);
@@ -302,10 +296,10 @@
             this.Controls.Add(this.btnAddRecord);
             this.Controls.Add(this.workLogDataGridView);
             this.Controls.Add(this.workerDataGridView);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Сотрудники / Записи";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.workerDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workLogDataGridView)).EndInit();
