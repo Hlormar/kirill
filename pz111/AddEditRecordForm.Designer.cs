@@ -30,7 +30,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 144);
+            this.label3.Location = new System.Drawing.Point(25, 36);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 25);
@@ -40,7 +40,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 202);
+            this.label4.Location = new System.Drawing.Point(25, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(179, 25);
@@ -50,7 +50,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 260);
+            this.label5.Location = new System.Drawing.Point(25, 152);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(196, 25);
@@ -59,32 +59,32 @@
             // 
             // txtStartDate
             // 
-            this.txtStartDate.Location = new System.Drawing.Point(270, 138);
-            this.txtStartDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtStartDate.Location = new System.Drawing.Point(271, 30);
+            this.txtStartDate.Margin = new System.Windows.Forms.Padding(6);
             this.txtStartDate.Name = "txtStartDate";
             this.txtStartDate.Size = new System.Drawing.Size(396, 31);
             this.txtStartDate.TabIndex = 7;
             // 
             // txtEndDate
             // 
-            this.txtEndDate.Location = new System.Drawing.Point(270, 196);
-            this.txtEndDate.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtEndDate.Location = new System.Drawing.Point(271, 88);
+            this.txtEndDate.Margin = new System.Windows.Forms.Padding(6);
             this.txtEndDate.Name = "txtEndDate";
             this.txtEndDate.Size = new System.Drawing.Size(396, 31);
             this.txtEndDate.TabIndex = 8;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(270, 254);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtDescription.Location = new System.Drawing.Point(271, 146);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(6);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(396, 31);
             this.txtDescription.TabIndex = 9;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(360, 327);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnSave.Location = new System.Drawing.Point(361, 219);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(6);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(150, 44);
             this.btnSave.TabIndex = 10;
@@ -94,8 +94,8 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(140, 327);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnCancel.Location = new System.Drawing.Point(141, 219);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(150, 44);
             this.btnCancel.TabIndex = 11;
@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 394);
+            this.ClientSize = new System.Drawing.Size(700, 292);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtDescription);
@@ -116,7 +116,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "AddEditRecordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Запись о работе";

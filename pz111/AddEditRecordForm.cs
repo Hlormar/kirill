@@ -8,14 +8,12 @@ namespace pz111
         public DataSet1 TheDataSet;
         public bool IsAddMode;
         public DataSet1.WorkLogRow WorkLogRowToEdit;
-        public int DefaultWorkerId;
+        public int DefaultWorkerId; 
 
         public AddEditRecordForm()
         {
             InitializeComponent();
 
-            // Подписываемся на события KeyPress
-            
             txtStartDate.KeyPress += TxtDate_KeyPress;
             txtEndDate.KeyPress += TxtDate_KeyPress;
         }
@@ -24,24 +22,20 @@ namespace pz111
         {
             if (!IsAddMode && WorkLogRowToEdit != null)
             {
-                // Заполняем только видимые поля
-               
+                // РЕДАКТИРОВАНИЕ: показываем текущие значения
                 txtStartDate.Text = WorkLogRowToEdit.StartDate.ToString("dd.MM.yyyy");
                 txtEndDate.Text = WorkLogRowToEdit.EndDate.ToString("dd.MM.yyyy");
                 txtDescription.Text = WorkLogRowToEdit.Description;
             }
             else
             {
-                // При добавлении КодЗаписи скрыт, а КодРаботника берем из главной формы
-            
+                // ДОБАВЛЕНИЕ: даты по умолчанию
                 txtStartDate.Text = DateTime.Today.ToString("dd.MM.yyyy");
                 txtEndDate.Text = DateTime.Today.AddDays(7).ToString("dd.MM.yyyy");
+
+                this.Text = $"Добавить запись для работника (ID: {DefaultWorkerId})";
             }
         }
-
-        // ========== ОБРАБОТЧИКИ KEYPRESS ==========
-
-
 
         private void TxtDate_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -53,7 +47,7 @@ namespace pz111
                 return;
             }
 
-            if (e.KeyChar == '.' && tb.Text.Contains("."))
+            if (e.KeyChar == '.')
             {
                 int dotCount = 0;
                 foreach (char c in tb.Text)
@@ -67,12 +61,8 @@ namespace pz111
             }
         }
 
-        // ========== СОХРАНЕНИЕ ==========
-
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-
             if (!DateTime.TryParseExact(txtStartDate.Text, "dd.MM.yyyy",
                 null, System.Globalization.DateTimeStyles.None, out DateTime startDate))
             {
@@ -104,14 +94,18 @@ namespace pz111
                 if (IsAddMode)
                 {
                     DataSet1.WorkLogRow newRow = TheDataSet.WorkLog.NewWorkLogRow();
+                    newRow.WorkerId = this.DefaultWorkerId;
+
                     newRow.StartDate = startDate;
                     newRow.EndDate = endDate;
                     newRow.Description = txtDescription.Text;
+
                     TheDataSet.WorkLog.AddWorkLogRow(newRow);
                 }
                 else
                 {
-       
+
+
                     WorkLogRowToEdit.StartDate = startDate;
                     WorkLogRowToEdit.EndDate = endDate;
                     WorkLogRowToEdit.Description = txtDescription.Text;
@@ -132,11 +126,5 @@ namespace pz111
             this.Close();
         }
 
-        // Заглушки для Designer
-        private void label1_Click(object sender, EventArgs e) { }
-        private void label2_Click(object sender, EventArgs e) { }
-        private void label3_Click(object sender, EventArgs e) { }
-        private void label4_Click(object sender, EventArgs e) { }
-        private void label5_Click(object sender, EventArgs e) { }
     }
 }
