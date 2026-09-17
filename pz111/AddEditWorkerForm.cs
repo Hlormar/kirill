@@ -18,54 +18,111 @@ namespace pz111
         private DataSet1 dataSet1;
         private DataGridViewRow currentRow;
 
-        public AddEditWorkerForm(DataSet1 _dataSet1, DataGridViewRow _currentRow = null)
+        //инкапсуляция йоу
+        public void setDataSet(DataSet1 _dataSet) {
+            dataSet1 = _dataSet;
+        }
+        public void setCurrentRow(DataGridViewRow _currentRow) {
+            currentRow = _currentRow;
+        }
+
+        public AddEditWorkerForm()
         {
             InitializeComponent();
-            //чтобы получить ту самую переменную dataSet1, созданную ранее в Form1, передаем ее как аргумент конструктора 
-            dataSet1 = _dataSet1;
-            currentRow = _currentRow; 
 
-            //если редактируем работника, то получаем значения текущей строки
-            if (currentRow != null ) 
-            { 
-                textBoxWorkerID.Text = currentRow.Cells[0].Value?.ToString();
-                textBoxWorkerID.ReadOnly = true;
-                textBoxWorkerFIO.Text = currentRow.Cells[1].Value?.ToString();
-                textBoxWorkerPosition.Text = currentRow.Cells[2].Value?.ToString();
-                textBoxWorkerINN.Text = currentRow.Cells[3].Value?.ToString();
-            }
         }
 
-        //check if textBox data is valid
-        private bool isDataValid()
+        /// 
+        /// KeyPress и textchanged listeners
+        /// ФИО (только буквы и пробел, 80 length)
+        /// 
+        private void keyPressFIO(object sender, KeyPressEventArgs e)
         {
-            bool isValid = true;
-            string errorsMessage = string.Empty;
-            TextBox[] textBoxes = { textBoxWorkerID, textBoxWorkerFIO, textBoxWorkerPosition, textBoxWorkerINN };
-            //TODO: delete workerId field
-            foreach (TextBox textBox in textBoxes)
-            {
-                if (string.IsNullOrEmpty(textBox.Text))
-                {
-                    isValid = false;
-                    errorsMessage += $"Поле {textBox.Name} должно быть заполнено\n";
-                }
-            }
-            if (!textBoxWorkerINN.Text.All(char.IsDigit)) 
-            {
-                isValid = false;
-                errorsMessage += $"Поле {textBoxWorkerINN.Name} должно содержать только числа\n";
-            }
+            // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C)
+            if (char.IsControl(e.KeyChar)) return;
 
-            if (!isValid) 
-            {
-                MessageBox.Show(errorsMessage, "Неверный формат данных", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+            if (textBoxWorkerFIO.Text.Length >= 80)
+                e.Handled = true;
+        }
 
-            return isValid;
+        private void textChangedFIO(object sender, EventArgs e)
+        {
+            var tb = (TextBox)sender;
+            string cleaned = new string(tb.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray());
+
+            if (cleaned.Length > 80)
+                cleaned = cleaned.Substring(0, 80);
+
+            if (tb.Text != cleaned)
+            {
+                int pos = tb.SelectionStart;
+                tb.Text = cleaned;
+                tb.SelectionStart = pos;
+            }
+        }
+        /// 
+        /// Должность (буквы и цифры), 30 length
+        /// 
+        private void keyPressPosition(object sender, KeyPressEventArgs e)
+        {
+            // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C)
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (!char.IsLetterOrDigit(e.KeyChar) && e.KeyChar != ' ')
+                e.Handled = true;
+            if (textBoxWorkerPosition.Text.Length >= 30)
+                e.Handled = true;
+        }
+
+        private void textChangedPosition(object sender, EventArgs e)
+        {
+            var tb = (TextBox)sender;
+            string cleaned = new string(tb.Text.Where(c => char.IsLetterOrDigit(c) || c == ' ').ToArray());
+
+            if (cleaned.Length > 30)
+                cleaned = cleaned.Substring(0, 30);
+
+            if (tb.Text != cleaned)
+            {
+                int pos = tb.SelectionStart;
+                tb.Text = cleaned;
+                tb.SelectionStart = pos;
+            }
+        }
+        ///
+        /// ИНН (только 12 цифр)
+        ///
+        private void keyPressINN(object sender, KeyPressEventArgs e)
+        {
+            // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C)
+            if (char.IsControl(e.KeyChar)) return;
+
+            if (!char.IsDigit(e.KeyChar))
+                e.Handled = true;
+            if (textBoxWorkerINN.Text.Length >= 12)
+                e.Handled = true;
 
         }
+
+        private void textChangedINN(object sender, EventArgs e)
+        {
+            var tb = (TextBox)sender;
+            string cleaned = new string(tb.Text.Where(c => char.IsDigit(c)).ToArray());
+
+            if (cleaned.Length > 12)
+                cleaned = cleaned.Substring(0, 12);
+
+            if (tb.Text != cleaned)
+            {
+                int pos = tb.SelectionStart;
+                tb.Text = cleaned;
+                tb.SelectionStart = pos;
+            }
+        }
+
+
 
         private void AddWorker() 
         { 
@@ -74,7 +131,7 @@ namespace pz111
             newWorker["Position"] = textBoxWorkerPosition.Text;
             newWorker["Inn"] = textBoxWorkerINN.Text;
             dataSet1.Worker.Rows.Add(newWorker);
-            dataSet1.Worker.AcceptChanges();
+            //dataSet1.Worker.AcceptChanges();
             Console.WriteLine("worker added");
         }
 
@@ -83,37 +140,54 @@ namespace pz111
             selectedRow["FullName"] = textBoxWorkerFIO.Text;
             selectedRow["Position"] = textBoxWorkerPosition.Text;
             selectedRow["Inn"] = textBoxWorkerINN.Text;
-            dataSet1.AcceptChanges();
+            //dataSet1.AcceptChanges();
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //save
-            if (isDataValid()) {
-                //если передали выбранную строку, значит мы редактировали
-                if (currentRow != null) {
-                    EditWorker(Convert.ToInt64(textBoxWorkerID.Text));
-                } else //иначе добавляем нового работника
-                {
-                    AddWorker();
-                }
-               
-                this.Close();
+            //если мы передали строку, значит мы редактируем работника.
+            //получаем значения текущей строки
+            if (currentRow != null)
+            {
+                textBoxWorkerFIO.Text = currentRow.Cells["Worker_FIO"].Value?.ToString();
+                textBoxWorkerPosition.Text = currentRow.Cells["Worker_Position"].Value?.ToString();
+                textBoxWorkerINN.Text = currentRow.Cells["Worker_INN"].Value?.ToString();
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void saveButtonClick(object sender, EventArgs e)
+        {
+            // 1. Проверка на пустоту
+            if (string.IsNullOrWhiteSpace(textBoxWorkerFIO.Text) ||
+                string.IsNullOrWhiteSpace(textBoxWorkerPosition.Text) ||
+                string.IsNullOrWhiteSpace(textBoxWorkerINN.Text))
+            {
+                MessageBox.Show("Все поля должны быть заполнены!", "Неверный формат данных", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+
+            // 2. Проверка длины ИНН (TextChanged фильтрует цифры, но не гарантирует ровно 12)
+            if (textBoxWorkerINN.Text.Length != 12)
+            {
+                MessageBox.Show("ИНН должен состоять ровно из 12 цифр!", "Неверный формат данных", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            if (currentRow != null) {
+                EditWorker(Convert.ToInt64(currentRow.Cells["Worker_ID"].Value));
+            } else //иначе добавляем нового работника
+            {
+                AddWorker();
+            }
+               
+            this.Close();
+            
+        }
+
+        private void cancelButtonClick(object sender, EventArgs e)
         {
             //otmena
             this.DialogResult = DialogResult.Cancel;
