@@ -33,10 +33,6 @@
             this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new pz111.DataSet1();
             this.workerDataGridView = new System.Windows.Forms.DataGridView();
-            this.Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Worker_FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Worker_Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Worker_INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.workLogDataGridView = new System.Windows.Forms.DataGridView();
             this.workLogBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.AddRecordButton = new System.Windows.Forms.Button();
@@ -59,12 +55,16 @@
             this.workerBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.workerBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RecordId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Worker_FIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Worker_Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Worker_INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerDataGridView)).BeginInit();
@@ -105,41 +105,6 @@
             this.workerDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.workerDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.workerDataGridView_CellContentClick);
             // 
-            // Worker_ID
-            // 
-            this.Worker_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Worker_ID.DataPropertyName = "WorkerId";
-            resources.ApplyResources(this.Worker_ID, "Worker_ID");
-            this.Worker_ID.Name = "Worker_ID";
-            this.Worker_ID.ReadOnly = true;
-            // 
-            // Worker_FIO
-            // 
-            this.Worker_FIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Worker_FIO.DataPropertyName = "FullName";
-            this.Worker_FIO.FillWeight = 300F;
-            resources.ApplyResources(this.Worker_FIO, "Worker_FIO");
-            this.Worker_FIO.Name = "Worker_FIO";
-            this.Worker_FIO.ReadOnly = true;
-            // 
-            // Worker_Position
-            // 
-            this.Worker_Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Worker_Position.DataPropertyName = "Position";
-            this.Worker_Position.FillWeight = 200F;
-            resources.ApplyResources(this.Worker_Position, "Worker_Position");
-            this.Worker_Position.Name = "Worker_Position";
-            this.Worker_Position.ReadOnly = true;
-            // 
-            // Worker_INN
-            // 
-            this.Worker_INN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Worker_INN.DataPropertyName = "Inn";
-            this.Worker_INN.FillWeight = 200F;
-            resources.ApplyResources(this.Worker_INN, "Worker_INN");
-            this.Worker_INN.Name = "Worker_INN";
-            this.Worker_INN.ReadOnly = true;
-            // 
             // workLogDataGridView
             // 
             this.workLogDataGridView.AllowUserToAddRows = false;
@@ -150,12 +115,12 @@
             this.workLogDataGridView.AutoGenerateColumns = false;
             this.workLogDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.workLogDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.RecordId,
-            this.FIO,
             this.StartDate,
             this.EndDate,
             this.Description,
-            this.WorkerID});
+            this.RecordId,
+            this.WorkerID,
+            this.FIO});
             this.workLogDataGridView.DataSource = this.workLogBindingSource;
             this.workLogDataGridView.MultiSelect = false;
             this.workLogDataGridView.Name = "workLogDataGridView";
@@ -307,17 +272,9 @@
             // tableLayoutPanel1
             // 
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
-            this.tableLayoutPanel1.Controls.Add(this.workerDataGridView, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.workLogDataGridView, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.workerDataGridView, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.workLogDataGridView, 0, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            // 
-            // RecordId
-            // 
-            this.RecordId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.RecordId.DataPropertyName = "RecordId";
-            resources.ApplyResources(this.RecordId, "RecordId");
-            this.RecordId.Name = "RecordId";
-            this.RecordId.ReadOnly = true;
             // 
             // FIO
             // 
@@ -354,12 +311,55 @@
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
             // 
+            // RecordId
+            // 
+            this.RecordId.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.RecordId.DataPropertyName = "RecordId";
+            resources.ApplyResources(this.RecordId, "RecordId");
+            this.RecordId.Name = "RecordId";
+            this.RecordId.ReadOnly = true;
+            // 
             // WorkerID
             // 
             this.WorkerID.DataPropertyName = "WorkerId";
             resources.ApplyResources(this.WorkerID, "WorkerID");
             this.WorkerID.Name = "WorkerID";
             this.WorkerID.ReadOnly = true;
+            // 
+            // Worker_ID
+            // 
+            this.Worker_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Worker_ID.DataPropertyName = "WorkerId";
+            resources.ApplyResources(this.Worker_ID, "Worker_ID");
+            this.Worker_ID.Name = "Worker_ID";
+            this.Worker_ID.ReadOnly = true;
+            // 
+            // Worker_FIO
+            // 
+            this.Worker_FIO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Worker_FIO.DataPropertyName = "FullName";
+            this.Worker_FIO.FillWeight = 300F;
+            resources.ApplyResources(this.Worker_FIO, "Worker_FIO");
+            this.Worker_FIO.Name = "Worker_FIO";
+            this.Worker_FIO.ReadOnly = true;
+            // 
+            // Worker_Position
+            // 
+            this.Worker_Position.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Worker_Position.DataPropertyName = "Position";
+            this.Worker_Position.FillWeight = 200F;
+            resources.ApplyResources(this.Worker_Position, "Worker_Position");
+            this.Worker_Position.Name = "Worker_Position";
+            this.Worker_Position.ReadOnly = true;
+            // 
+            // Worker_INN
+            // 
+            this.Worker_INN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Worker_INN.DataPropertyName = "Inn";
+            this.Worker_INN.FillWeight = 200F;
+            resources.ApplyResources(this.Worker_INN, "Worker_INN");
+            this.Worker_INN.Name = "Worker_INN";
+            this.Worker_INN.ReadOnly = true;
             // 
             // Form1
             // 
@@ -418,11 +418,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Worker_FIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn Worker_Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn Worker_INN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn FIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RecordId;
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkerID;
     }
 }

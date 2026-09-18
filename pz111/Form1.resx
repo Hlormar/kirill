@@ -128,7 +128,7 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="Worker_ID.HeaderText" xml:space="preserve">
-    <value>ID работника</value>
+    <value>Номер работника</value>
   </data>
   <data name="Worker_FIO.HeaderText" xml:space="preserve">
     <value>ФИО работника</value>
@@ -141,7 +141,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="workerDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 216</value>
+    <value>3, 3</value>
   </data>
   <data name="workerDataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 207</value>
@@ -165,12 +165,6 @@
   <data name="workLogDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
-  <data name="RecordId.HeaderText" xml:space="preserve">
-    <value>ID записи</value>
-  </data>
-  <data name="FIO.HeaderText" xml:space="preserve">
-    <value>ФИО работника</value>
-  </data>
   <data name="StartDate.HeaderText" xml:space="preserve">
     <value>Дата начала</value>
   </data>
@@ -178,7 +172,13 @@
     <value>Дата окончания</value>
   </data>
   <data name="Description.HeaderText" xml:space="preserve">
-    <value>Описание</value>
+    <value>Описание работы</value>
+  </data>
+  <data name="RecordId.HeaderText" xml:space="preserve">
+    <value>ID записи</value>
+  </data>
+  <data name="RecordId.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="WorkerID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -189,11 +189,14 @@
   <data name="WorkerID.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
+  <data name="FIO.HeaderText" xml:space="preserve">
+    <value>ФИО работника</value>
+  </data>
   <metadata name="workLogBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>466, 17</value>
   </metadata>
   <data name="workLogDataGridView.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 216</value>
   </data>
   <data name="workLogDataGridView.Size" type="System.Drawing.Size, System.Drawing">
     <value>779, 207</value>
@@ -220,7 +223,7 @@
     <value>False</value>
   </data>
   <data name="AddRecordButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 28</value>
+    <value>804, 244</value>
   </data>
   <data name="AddRecordButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -250,7 +253,7 @@
     <value>False</value>
   </data>
   <data name="EditRecordButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 90</value>
+    <value>804, 306</value>
   </data>
   <data name="EditRecordButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -280,7 +283,7 @@
     <value>False</value>
   </data>
   <data name="DeleteRecordButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 151</value>
+    <value>804, 367</value>
   </data>
   <data name="DeleteRecordButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -310,7 +313,7 @@
     <value>False</value>
   </data>
   <data name="EditWorkerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 284</value>
+    <value>804, 89</value>
   </data>
   <data name="EditWorkerButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -337,7 +340,7 @@
     <value>Top, Right</value>
   </data>
   <data name="AddWorkerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 223</value>
+    <value>804, 28</value>
   </data>
   <data name="AddWorkerButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -367,7 +370,7 @@
     <value>False</value>
   </data>
   <data name="DeleteWorkerButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>803, 345</value>
+    <value>804, 150</value>
   </data>
   <data name="DeleteWorkerButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>168, 55</value>
@@ -450,10 +453,10 @@
     <value>Текущее положение</value>
   </data>
   <data name="bindingNavigatorCountItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>35, 22</value>
+    <value>43, 22</value>
   </data>
   <data name="bindingNavigatorCountItem.Text" xml:space="preserve">
-    <value>of {0}</value>
+    <value>для {0}</value>
   </data>
   <data name="bindingNavigatorCountItem.ToolTipText" xml:space="preserve">
     <value>Общее число элементов</value>
@@ -612,7 +615,7 @@
     <value>0</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="workerDataGridView" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="workLogDataGridView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,20" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="workerDataGridView" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="workLogDataGridView" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50,Absolute,20" /&gt;&lt;Rows Styles="Percent,50,Percent,50" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -622,6 +625,9 @@
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>984, 461</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 200</value>
@@ -643,30 +649,6 @@
   </data>
   <data name="&gt;&gt;dataSet1.Type" xml:space="preserve">
     <value>pz111.DataSet1, DataSet11.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;Worker_ID.Name" xml:space="preserve">
-    <value>Worker_ID</value>
-  </data>
-  <data name="&gt;&gt;Worker_ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_FIO.Name" xml:space="preserve">
-    <value>Worker_FIO</value>
-  </data>
-  <data name="&gt;&gt;Worker_FIO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_Position.Name" xml:space="preserve">
-    <value>Worker_Position</value>
-  </data>
-  <data name="&gt;&gt;Worker_Position.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_INN.Name" xml:space="preserve">
-    <value>Worker_INN</value>
-  </data>
-  <data name="&gt;&gt;Worker_INN.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;workLogBindingSource.Name" xml:space="preserve">
     <value>workLogBindingSource</value>
@@ -746,12 +728,6 @@
   <data name="&gt;&gt;workerBindingNavigatorSaveItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RecordId.Name" xml:space="preserve">
-    <value>RecordId</value>
-  </data>
-  <data name="&gt;&gt;RecordId.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;FIO.Name" xml:space="preserve">
     <value>FIO</value>
   </data>
@@ -776,10 +752,40 @@
   <data name="&gt;&gt;Description.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;RecordId.Name" xml:space="preserve">
+    <value>RecordId</value>
+  </data>
+  <data name="&gt;&gt;RecordId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;WorkerID.Name" xml:space="preserve">
     <value>WorkerID</value>
   </data>
   <data name="&gt;&gt;WorkerID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_ID.Name" xml:space="preserve">
+    <value>Worker_ID</value>
+  </data>
+  <data name="&gt;&gt;Worker_ID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_FIO.Name" xml:space="preserve">
+    <value>Worker_FIO</value>
+  </data>
+  <data name="&gt;&gt;Worker_FIO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_Position.Name" xml:space="preserve">
+    <value>Worker_Position</value>
+  </data>
+  <data name="&gt;&gt;Worker_Position.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_INN.Name" xml:space="preserve">
+    <value>Worker_INN</value>
+  </data>
+  <data name="&gt;&gt;Worker_INN.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

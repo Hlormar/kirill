@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 105);
+            this.label1.Location = new System.Drawing.Point(16, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 34);
+            this.label2.Location = new System.Drawing.Point(16, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 13);
             this.label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 68);
+            this.label4.Location = new System.Drawing.Point(16, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 3;
@@ -67,7 +67,7 @@
             // 
             // textBoxWorkerFIO
             // 
-            this.textBoxWorkerFIO.Location = new System.Drawing.Point(129, 31);
+            this.textBoxWorkerFIO.Location = new System.Drawing.Point(122, 12);
             this.textBoxWorkerFIO.Name = "textBoxWorkerFIO";
             this.textBoxWorkerFIO.Size = new System.Drawing.Size(292, 20);
             this.textBoxWorkerFIO.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             // textBoxWorkerINN
             // 
-            this.textBoxWorkerINN.Location = new System.Drawing.Point(129, 102);
+            this.textBoxWorkerINN.Location = new System.Drawing.Point(122, 83);
             this.textBoxWorkerINN.Name = "textBoxWorkerINN";
             this.textBoxWorkerINN.Size = new System.Drawing.Size(292, 20);
             this.textBoxWorkerINN.TabIndex = 3;
@@ -85,7 +85,7 @@
             // 
             // textBoxWorkerPosition
             // 
-            this.textBoxWorkerPosition.Location = new System.Drawing.Point(129, 65);
+            this.textBoxWorkerPosition.Location = new System.Drawing.Point(122, 46);
             this.textBoxWorkerPosition.Name = "textBoxWorkerPosition";
             this.textBoxWorkerPosition.Size = new System.Drawing.Size(292, 20);
             this.textBoxWorkerPosition.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(231, 188);
+            this.saveButton.Location = new System.Drawing.Point(224, 122);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 5;
@@ -104,7 +104,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(122, 188);
+            this.cancelButton.Location = new System.Drawing.Point(115, 122);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 4;
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 229);
+            this.ClientSize = new System.Drawing.Size(438, 160);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.textBoxWorkerPosition);
@@ -126,6 +126,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddEditWorkerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавить работника";

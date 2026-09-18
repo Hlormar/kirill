@@ -42,7 +42,7 @@
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(69, 216);
+            this.cancelButton.Location = new System.Drawing.Point(126, 153);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 2;
@@ -52,7 +52,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(174, 216);
+            this.saveButton.Location = new System.Drawing.Point(231, 153);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(75, 23);
             this.saveButton.TabIndex = 3;
@@ -62,7 +62,7 @@
             // 
             // textBoxRecordWorkerID
             // 
-            this.textBoxRecordWorkerID.Location = new System.Drawing.Point(138, 37);
+            this.textBoxRecordWorkerID.Location = new System.Drawing.Point(125, 12);
             this.textBoxRecordWorkerID.Name = "textBoxRecordWorkerID";
             this.textBoxRecordWorkerID.Size = new System.Drawing.Size(292, 20);
             this.textBoxRecordWorkerID.TabIndex = 6;
@@ -72,16 +72,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 40);
+            this.label2.Location = new System.Drawing.Point(13, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(100, 13);
             this.label2.TabIndex = 7;
-            this.label2.Text = "ID работника:";
+            this.label2.Text = "Номер работника:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 75);
+            this.label3.Location = new System.Drawing.Point(13, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 8;
@@ -90,7 +90,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 110);
+            this.label4.Location = new System.Drawing.Point(13, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(92, 13);
             this.label4.TabIndex = 9;
@@ -99,7 +99,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 146);
+            this.label5.Location = new System.Drawing.Point(13, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 13);
             this.label5.TabIndex = 11;
@@ -107,7 +107,7 @@
             // 
             // textBoxRecordDescription
             // 
-            this.textBoxRecordDescription.Location = new System.Drawing.Point(138, 143);
+            this.textBoxRecordDescription.Location = new System.Drawing.Point(125, 118);
             this.textBoxRecordDescription.MaxLength = 200;
             this.textBoxRecordDescription.Name = "textBoxRecordDescription";
             this.textBoxRecordDescription.Size = new System.Drawing.Size(292, 20);
@@ -116,7 +116,7 @@
             // startDateTimePicker
             // 
             this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.startDateTimePicker.Location = new System.Drawing.Point(138, 75);
+            this.startDateTimePicker.Location = new System.Drawing.Point(125, 50);
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(292, 20);
             this.startDateTimePicker.TabIndex = 12;
@@ -124,7 +124,7 @@
             // endDateTimePicker2
             // 
             this.endDateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.endDateTimePicker2.Location = new System.Drawing.Point(138, 110);
+            this.endDateTimePicker2.Location = new System.Drawing.Point(125, 85);
             this.endDateTimePicker2.Name = "endDateTimePicker2";
             this.endDateTimePicker2.Size = new System.Drawing.Size(292, 20);
             this.endDateTimePicker2.TabIndex = 13;
@@ -133,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 259);
+            this.ClientSize = new System.Drawing.Size(429, 186);
             this.Controls.Add(this.endDateTimePicker2);
             this.Controls.Add(this.startDateTimePicker);
             this.Controls.Add(this.label5);
@@ -145,6 +145,8 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.cancelButton);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddEditRecordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Добавить запись";
