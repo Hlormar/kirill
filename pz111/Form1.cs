@@ -147,8 +147,8 @@ namespace pz111
             }
 
             // фильтруем записи
-
-            workLogBindingSource.Filter = $"WorkerID = {workerDataGridView.SelectedRows[0].Cells["Worker_ID"].Value}";
+            if (workerDataGridView.SelectedRows.Count > 0)
+                workLogBindingSource.Filter = $"WorkerID = {workerDataGridView.SelectedRows[0].Cells["Worker_ID"].Value}";
 
             // 3. Только теперь говорим программе, что форма полностью загружена
             isFormLoaded = true;
