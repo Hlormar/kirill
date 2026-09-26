@@ -15,6 +15,7 @@ namespace pz111
     {
         private DataSet1 dataSet1;
         private DataGridViewRow currentRow;
+        private int selectedWorker = -1;
 
         public void setDataSet(DataSet1 _dataSet)
         {
@@ -23,6 +24,11 @@ namespace pz111
         public void setCurrentRow(DataGridViewRow _currentRow)
         {
             currentRow = _currentRow;
+        }
+
+        public void setSelectedWorker(int _selectedWorker)
+        {
+             selectedWorker = _selectedWorker;
         }
 
 
@@ -34,8 +40,11 @@ namespace pz111
 
         private void AddEditRecordForm_Load(object sender, EventArgs e)
         {
+            //if (selectedWorker != -1) {
+                //textBoxRecordWorkerID.Text = selectedWorker.ToString();
+            //}
             if (currentRow != null) { 
-                textBoxRecordWorkerID.Text = currentRow.Cells["WorkerID"].Value?.ToString();
+                //textBoxRecordWorkerID.Text = currentRow.Cells["WorkerID"].Value?.ToString();
                 startDateTimePicker.Value = Convert.ToDateTime(currentRow.Cells["StartDate"].Value);
                 endDateTimePicker2.Value = Convert.ToDateTime(currentRow.Cells["EndDate"].Value);
                 textBoxRecordDescription.Text = currentRow.Cells["Description"].Value?.ToString();
@@ -46,7 +55,7 @@ namespace pz111
         ///
         /// ID (только int, length 9)
         ///
-        private void keyPressID(object sender, KeyPressEventArgs e)
+        /*private void keyPressID(object sender, KeyPressEventArgs e)
         {
             // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C)
             if (char.IsControl(e.KeyChar)) return;
@@ -72,7 +81,7 @@ namespace pz111
                 tb.Text = cleaned;
                 tb.SelectionStart = pos;
             }
-        }
+        }*/
 
         ///
         /// Description (length 150) 
@@ -81,7 +90,7 @@ namespace pz111
         private void AddEntry()
         {
             DataRow newEntry = dataSet1.WorkLog.NewRow();
-            newEntry["WorkerId"] = textBoxRecordWorkerID.Text;
+            newEntry["WorkerId"] = selectedWorker;//textBoxRecordWorkerID.Text;
             newEntry["StartDate"] = startDateTimePicker.Value;
             newEntry["EndDate"] = endDateTimePicker2.Value;
             newEntry["Description"] = textBoxRecordDescription.Text;
@@ -92,7 +101,7 @@ namespace pz111
         private void EditEntry(Int64 entryID)
         {
             DataRow selectedRow = dataSet1.WorkLog.Select($"RecordId = {entryID}")[0]; //возвращает массив с 1 элементом, сразу берем только его
-            selectedRow["WorkerId"] = textBoxRecordWorkerID.Text;
+            selectedRow["WorkerId"] = currentRow.Cells["WorkerID"].Value;//textBoxRecordWorkerID.Text;
             selectedRow["StartDate"] = startDateTimePicker.Value;
             selectedRow["EndDate"] = endDateTimePicker2.Value;
             selectedRow["Description"] = textBoxRecordDescription.Text;
@@ -103,20 +112,19 @@ namespace pz111
         private void saveButton_Click(object sender, EventArgs e)
         {
             //Проверка на пустоту
-            if (String.IsNullOrWhiteSpace(textBoxRecordWorkerID.Text) ||
-                String.IsNullOrWhiteSpace(textBoxRecordDescription.Text)) 
+            if (String.IsNullOrWhiteSpace(textBoxRecordDescription.Text)) 
             { 
-                MessageBox.Show("Все поля должны быть заполнены!", "Неверный формат данных", MessageBoxButtons.OK,
+                MessageBox.Show("Поле описания должно быть заполненым!", "Неверный формат данных", MessageBoxButtons.OK,
                     MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 return;
             }
 
             //Существование WorkerID
-            if (!dataSet1.Worker.Any(w => w.WorkerId == Convert.ToInt32(textBoxRecordWorkerID.Text))) {
+            /*if (!dataSet1.Worker.Any(w => w.WorkerId == Convert.ToInt32(textBoxRecordWorkerID.Text))) {
                 MessageBox.Show($"Работника с ID = {textBoxRecordWorkerID.Text} не найдено!", "Неверный формат данных", MessageBoxButtons.OK,
                     MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
                 return;
-            }
+            }*/
 
             //Сравнение дат
             if (startDateTimePicker.Value > endDateTimePicker2.Value) { 
@@ -126,7 +134,7 @@ namespace pz111
             }
 
             if (currentRow != null) {
-                EditEntry(Convert.ToInt64(currentRow.Cells[0].Value));
+                EditEntry(Convert.ToInt64(currentRow.Cells["RecordId"].Value));
             }
             else {
                 AddEntry();

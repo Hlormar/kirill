@@ -123,6 +123,9 @@
   <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="workerDataGridView.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -191,6 +194,9 @@
   </data>
   <data name="FIO.HeaderText" xml:space="preserve">
     <value>ФИО работника</value>
+  </data>
+  <data name="FIO.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <metadata name="workLogBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>466, 17</value>
@@ -453,10 +459,10 @@
     <value>Текущее положение</value>
   </data>
   <data name="bindingNavigatorCountItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 22</value>
+    <value>35, 22</value>
   </data>
   <data name="bindingNavigatorCountItem.Text" xml:space="preserve">
-    <value>для {0}</value>
+    <value>of {0}</value>
   </data>
   <data name="bindingNavigatorCountItem.ToolTipText" xml:space="preserve">
     <value>Общее число элементов</value>
@@ -626,9 +632,6 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>984, 461</value>
   </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>300, 200</value>
   </data>
@@ -649,6 +652,30 @@
   </data>
   <data name="&gt;&gt;dataSet1.Type" xml:space="preserve">
     <value>pz111.DataSet1, DataSet11.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;Worker_ID.Name" xml:space="preserve">
+    <value>Worker_ID</value>
+  </data>
+  <data name="&gt;&gt;Worker_ID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_FIO.Name" xml:space="preserve">
+    <value>Worker_FIO</value>
+  </data>
+  <data name="&gt;&gt;Worker_FIO.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_Position.Name" xml:space="preserve">
+    <value>Worker_Position</value>
+  </data>
+  <data name="&gt;&gt;Worker_Position.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Worker_INN.Name" xml:space="preserve">
+    <value>Worker_INN</value>
+  </data>
+  <data name="&gt;&gt;Worker_INN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;workLogBindingSource.Name" xml:space="preserve">
     <value>workLogBindingSource</value>
@@ -728,12 +755,6 @@
   <data name="&gt;&gt;workerBindingNavigatorSaveItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FIO.Name" xml:space="preserve">
-    <value>FIO</value>
-  </data>
-  <data name="&gt;&gt;FIO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;StartDate.Name" xml:space="preserve">
     <value>StartDate</value>
   </data>
@@ -764,28 +785,10 @@
   <data name="&gt;&gt;WorkerID.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;Worker_ID.Name" xml:space="preserve">
-    <value>Worker_ID</value>
+  <data name="&gt;&gt;FIO.Name" xml:space="preserve">
+    <value>FIO</value>
   </data>
-  <data name="&gt;&gt;Worker_ID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_FIO.Name" xml:space="preserve">
-    <value>Worker_FIO</value>
-  </data>
-  <data name="&gt;&gt;Worker_FIO.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_Position.Name" xml:space="preserve">
-    <value>Worker_Position</value>
-  </data>
-  <data name="&gt;&gt;Worker_Position.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Worker_INN.Name" xml:space="preserve">
-    <value>Worker_INN</value>
-  </data>
-  <data name="&gt;&gt;Worker_INN.Type" xml:space="preserve">
+  <data name="&gt;&gt;FIO.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

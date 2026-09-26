@@ -38,19 +38,30 @@ namespace pz111
         /// 
         private void keyPressFIO(object sender, KeyPressEventArgs e)
         {
-            // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C)
+            // 1. Всегда разрешаем управляющие клавиши (Backspace, Delete, Ctrl+C и т.д.)
             if (char.IsControl(e.KeyChar)) return;
 
-            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ')
+            // 2. Разрешаем буквы, пробел и тире. Если символ не подходит под это условие — блокируем его
+            if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != '-')
+            {
                 e.Handled = true;
-            if (textBoxWorkerFIO.Text.Length >= 80)
+                return;
+            }
+
+            // 3. Ограничение длины (лучше брать sender, чтобы метод работал для любого TextBox)
+            TextBox tb = (TextBox)sender;
+            if (tb.Text.Length >= 80)
+            {
                 e.Handled = true;
+            }
         }
 
         private void textChangedFIO(object sender, EventArgs e)
         {
             var tb = (TextBox)sender;
-            string cleaned = new string(tb.Text.Where(c => char.IsLetter(c) || c == ' ').ToArray());
+
+            // Добавляем условие c == '-' в фильтр
+            string cleaned = new string(tb.Text.Where(c => char.IsLetter(c) || c == ' ' || c == '-').ToArray());
 
             if (cleaned.Length > 80)
                 cleaned = cleaned.Substring(0, 80);
