@@ -1,0 +1,13 @@
+INSERT INTO ProductCategory VALUES (1,'Сухие смеси'),(2,'Листовые материалы'),(3,'Кирпич');
+INSERT INTO Position VALUES (1,'Продавец',45000),(2,'Администратор',60000);
+INSERT INTO Supplier VALUES (1,'СтройСнаб','info@stroysnab.ru'),(2,'Материал-Сервис','sales@materials.ru');
+INSERT INTO Product VALUES (1,1,'Цемент М500',650),(2,2,'Гипсокартон 12,5 мм',520),(3,3,'Кирпич строительный',32);
+INSERT INTO Employee VALUES (1,1,'Иванов','Иван','Иванович','720000000001','+7-900-000-00-01','2026-09-01',NULL),(2,2,'Петрова','Анна','Сергеевна','720000000002','+7-900-000-00-02','2026-09-01',NULL);
+INSERT INTO Supply VALUES (1,1,'2026-09-10'),(2,2,'2026-09-12');
+INSERT INTO SupplyProduct VALUES (1,1,1,100,'2026-12-10',500),(2,1,2,80,NULL,410),(3,2,3,1000,NULL,22);
+INSERT INTO Sale VALUES (1,1,'2026-09-15','Карта','**** 1234'),(2,1,'2026-09-16','Наличные',NULL);
+INSERT INTO SaleProduct VALUES (1,1,1,10,6500),(2,1,2,5,2600),(3,2,3,100,3200);
+INSERT INTO "Return" VALUES (1,1,1);
+INSERT INTO ReturnProduct VALUES (1,1,1,2,1300);
+INSERT INTO WriteOff VALUES (1,2,'Повреждена упаковка','2026-09-17');
+INSERT INTO WriteOffProduct VALUES (1,1,1,1);

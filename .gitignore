@@ -12,3 +12,10 @@ Release/
 
 *.log
 *.vsidx
+
+# Local build, extraction, and verification artifacts for TRBD 5-6
+TRBD_5_6/.packages/
+TRBD_5_6/.codex-tools/
+TRBD_5_6/.publish-kirill/
+TRBD_5_6/verification/*
+!TRBD_5_6/verification/verification.txt

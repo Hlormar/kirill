@@ -1,0 +1,161 @@
+PASS: SQLite integrity
+PASS: Foreign keys
+PASS: Seed stock = supply + returns - sales - writeoffs
+PASS: Insert, update and Cyrillic search
+PASS: Case-insensitive Cyrillic search
+PASS: Parameterized search
+PASS: Delete dictionary record
+PASS: Referenced product deletion rejected
+PASS: Stock-breaking supply deletion rejected
+PASS: Failed document deletion rolls back its lines
+PASS: Overselling rejected
+PASS: Failed insert rolls back header
+PASS: Sale decreases stock
+PASS: Return above sold quantity rejected
+PASS: Return of unrelated product rejected
+PASS: Return uses receipt price
+PASS: Sale with return cannot be deleted
+PASS: Document deletion restores stock
+PASS: Income = sales - returns - purchases
+PASS: Sales multi-table query
+PASS: Sales export
+PASS: Sales empty export
+PASS: Supplies multi-table query
+PASS: Supplies export
+PASS: Supplies empty export
+PASS: Stock multi-table query
+PASS: Stock export
+PASS: Stock empty export
+PASS: ProductCategory list loads on UI thread
+PASS: ProductCategory data grid columns
+PASS: ProductCategory loads without UI errors: 
+PASS: ProductCategory list buttons remain usable after resize
+PASS: ProductCategory list grid fits after resize ({X=15,Y=167,Width=594,Height=69}, parent {Width=624, Height=251}, window {Width=640, Height=290})
+PASS: ProductCategory list buttons remain usable after resize
+PASS: ProductCategory list grid fits after resize ({X=15,Y=167,Width=1000,Height=253}, parent {Width=1030, Height=435}, window {Width=1046, Height=474})
+PASS: ProductCategory editor layout
+PASS: ProductCategory editor buttons remain usable after resize
+PASS: ProductCategory editor buttons remain usable after resize
+PASS: ProductCategory saves through editor: 
+PASS: Position list loads on UI thread
+PASS: Position data grid columns
+PASS: Position loads without UI errors: 
+PASS: Position list buttons remain usable after resize
+PASS: Position list grid fits after resize ({X=15,Y=167,Width=594,Height=69}, parent {Width=624, Height=251}, window {Width=640, Height=290})
+PASS: Position list buttons remain usable after resize
+PASS: Position list grid fits after resize ({X=15,Y=167,Width=1000,Height=221}, parent {Width=1030, Height=403}, window {Width=1046, Height=442})
+PASS: Position editor layout
+PASS: Position editor buttons remain usable after resize
+PASS: Position editor buttons remain usable after resize
+PASS: Position saves through editor: 
+PASS: Supplier list loads on UI thread
+PASS: Supplier data grid columns
+PASS: Supplier loads without UI errors: 
+PASS: Supplier list buttons remain usable after resize
+PASS: Supplier list grid fits after resize ({X=15,Y=167,Width=594,Height=69}, parent {Width=624, Height=251}, window {Width=640, Height=290})
+PASS: Supplier list buttons remain usable after resize
+PASS: Supplier list grid fits after resize ({X=15,Y=167,Width=1000,Height=221}, parent {Width=1030, Height=403}, window {Width=1046, Height=442})
+PASS: Supplier editor layout
+PASS: Supplier editor buttons remain usable after resize
+PASS: Supplier editor buttons remain usable after resize
+PASS: Supplier saves through editor: 
+PASS: Product list loads on UI thread
+PASS: Product data grid columns
+PASS: Product loads without UI errors: 
+PASS: Product list buttons remain usable after resize
+PASS: Product list grid fits after resize ({X=15,Y=167,Width=594,Height=69}, parent {Width=624, Height=251}, window {Width=640, Height=290})
+PASS: Product list buttons remain usable after resize
+PASS: Product list grid fits after resize ({X=15,Y=167,Width=1000,Height=253}, parent {Width=1030, Height=435}, window {Width=1046, Height=474})
+PASS: Product editor layout
+PASS: Product editor buttons remain usable after resize
+PASS: Product editor buttons remain usable after resize
+PASS: Product selected CategoryID
+PASS: Product saves through editor: 
+PASS: Employee list loads on UI thread
+PASS: Employee data grid columns
+PASS: Employee loads without UI errors: 
+PASS: Employee list buttons remain usable after resize
+PASS: Employee list grid fits after resize ({X=15,Y=167,Width=594,Height=69}, parent {Width=624, Height=251}, window {Width=640, Height=290})
+PASS: Employee list buttons remain usable after resize
+PASS: Employee list grid fits after resize ({X=15,Y=167,Width=1320,Height=221}, parent {Width=1350, Height=403}, window {Width=1366, Height=442})
+PASS: Employee editor layout
+PASS: Employee editor buttons remain usable after resize
+PASS: Employee editor buttons remain usable after resize
+PASS: Employee selected PositionID
+PASS: Employee saves through editor: 
+PASS: Supply list loads on UI thread
+PASS: Supply data grid columns
+PASS: Supply loads without UI errors: 
+PASS: Supply list buttons remain usable after resize
+PASS: Supply list grid fits after resize ({X=0,Y=0,Width=594,Height=123}, parent {Width=594, Height=123}, window {Width=640, Height=450})
+PASS: Supply list buttons remain usable after resize
+PASS: Supply list grid fits after resize ({X=0,Y=0,Width=1160,Height=208}, parent {Width=1160, Height=208}, window {Width=1206, Height=601})
+PASS: Supply editor layout
+PASS: Supply editor buttons remain usable after resize
+PASS: Supply editor grid fits after resize ({X=3,Y=50,Width=694,Height=145}, parent {Width=700, Height=198}, window {Width=740, Height=514})
+PASS: Supply editor buttons remain usable after resize
+PASS: Supply editor grid fits after resize ({X=3,Y=50,Width=1060,Height=235}, parent {Width=1066, Height=288}, window {Width=1106, Height=604})
+PASS: Supply selected SupplierID
+PASS: Supply saves through editor: 
+PASS: Sale list loads on UI thread
+PASS: Sale data grid columns
+PASS: Sale loads without UI errors: 
+PASS: Sale list buttons remain usable after resize
+PASS: Sale list grid fits after resize ({X=0,Y=0,Width=594,Height=123}, parent {Width=594, Height=123}, window {Width=640, Height=450})
+PASS: Sale list buttons remain usable after resize
+PASS: Sale list grid fits after resize ({X=0,Y=0,Width=1160,Height=208}, parent {Width=1160, Height=208}, window {Width=1206, Height=601})
+PASS: Sale editor layout
+PASS: Sale editor buttons remain usable after resize
+PASS: Sale editor grid fits after resize ({X=3,Y=50,Width=694,Height=145}, parent {Width=700, Height=198}, window {Width=740, Height=590})
+PASS: Sale editor buttons remain usable after resize
+PASS: Sale editor grid fits after resize ({X=3,Y=50,Width=1060,Height=235}, parent {Width=1066, Height=288}, window {Width=1106, Height=680})
+PASS: Sale selected EmployeeID
+PASS: Sale saves through editor: 
+PASS: Return list loads on UI thread
+PASS: Return data grid columns
+PASS: Return loads without UI errors: 
+PASS: Return list buttons remain usable after resize
+PASS: Return list grid fits after resize ({X=0,Y=0,Width=594,Height=123}, parent {Width=594, Height=123}, window {Width=640, Height=450})
+PASS: Return list buttons remain usable after resize
+PASS: Return list grid fits after resize ({X=0,Y=0,Width=1160,Height=208}, parent {Width=1160, Height=208}, window {Width=1206, Height=601})
+PASS: Return editor layout
+PASS: Return editor buttons remain usable after resize
+PASS: Return editor grid fits after resize ({X=3,Y=50,Width=694,Height=145}, parent {Width=700, Height=198}, window {Width=740, Height=514})
+PASS: Return editor buttons remain usable after resize
+PASS: Return editor grid fits after resize ({X=3,Y=50,Width=1060,Height=235}, parent {Width=1066, Height=288}, window {Width=1106, Height=604})
+PASS: Return selected SaleID
+PASS: Return selected EmployeeID
+PASS: Return saves through editor: 
+PASS: WriteOff list loads on UI thread
+PASS: WriteOff data grid columns
+PASS: WriteOff loads without UI errors: 
+PASS: WriteOff list buttons remain usable after resize
+PASS: WriteOff list grid fits after resize ({X=0,Y=0,Width=594,Height=123}, parent {Width=594, Height=123}, window {Width=640, Height=450})
+PASS: WriteOff list buttons remain usable after resize
+PASS: WriteOff list grid fits after resize ({X=0,Y=0,Width=1160,Height=208}, parent {Width=1160, Height=208}, window {Width=1206, Height=601})
+PASS: WriteOff editor layout
+PASS: WriteOff editor buttons remain usable after resize
+PASS: WriteOff editor grid fits after resize ({X=3,Y=50,Width=694,Height=145}, parent {Width=700, Height=198}, window {Width=740, Height=552})
+PASS: WriteOff editor buttons remain usable after resize
+PASS: WriteOff editor grid fits after resize ({X=3,Y=50,Width=1060,Height=235}, parent {Width=1066, Height=288}, window {Width=1106, Height=642})
+PASS: WriteOff selected EmployeeID
+PASS: WriteOff saves through editor: 
+PASS: MDI main window and menus
+PASS: Real application startup loads products
+PASS: Application startup without UI errors: 
+PASS: Sales report window loads
+PASS: Sales report buttons remain usable after resize
+PASS: Sales report grid fits after resize ({X=15,Y=205,Width=634,Height=127}, parent {Width=664, Height=381}, window {Width=680, Height=420})
+PASS: Sales report buttons remain usable after resize
+PASS: Sales report grid fits after resize ({X=15,Y=166,Width=1220,Height=345}, parent {Width=1250, Height=560}, window {Width=1266, Height=599})
+PASS: Supplies report window loads
+PASS: Supplies report buttons remain usable after resize
+PASS: Supplies report grid fits after resize ({X=15,Y=205,Width=634,Height=127}, parent {Width=664, Height=381}, window {Width=680, Height=420})
+PASS: Supplies report buttons remain usable after resize
+PASS: Supplies report grid fits after resize ({X=15,Y=166,Width=1220,Height=345}, parent {Width=1250, Height=560}, window {Width=1266, Height=599})
+PASS: Stock report window loads
+PASS: Stock report buttons remain usable after resize
+PASS: Stock report grid fits after resize ({X=15,Y=166,Width=634,Height=166}, parent {Width=664, Height=381}, window {Width=680, Height=420})
+PASS: Stock report buttons remain usable after resize
+PASS: Stock report grid fits after resize ({X=15,Y=166,Width=1220,Height=345}, parent {Width=1250, Height=560}, window {Width=1266, Height=599})
+ALL CHECKS PASSED
